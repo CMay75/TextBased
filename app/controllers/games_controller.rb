@@ -1,4 +1,7 @@
-class GameController < ApplicationController
+class GamesController < ApplicationController
+    def index
+    end
+    
     def new
     end
     

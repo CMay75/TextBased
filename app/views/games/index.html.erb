@@ -1,0 +1,17 @@
+<body>
+    <div>
+        <p>Enroll by entering your name!</p>
+                
+        <%= form_for :user do |f| %>
+        <p>
+            <%= f.text_field :username %> <br>
+            <%= f.submit %>
+        </p>
+        <% end %>
+            
+        <p>Or continue your journey with your special key...</p>
+        <form>
+            <input type="text" name="key">
+        </form>
+    </div>
+</body>
