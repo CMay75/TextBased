@@ -46,15 +46,11 @@ class UsersController < ApplicationController
         end
   end
 end
-<<<<<<< HEAD
+
 private
     def user_params
         params.require(:user).permit(:username)
     end
-=======
 
-private
-    def user_params
-        params.require(:id)
-    end
->>>>>>> c6df9ec1569f269d81f70daf0c2fb5d51edc7c49
+
+
