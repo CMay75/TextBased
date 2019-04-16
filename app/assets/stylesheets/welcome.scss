@@ -14,6 +14,19 @@ h1, h2, p {
     border: 3px solid black;
 }
 
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
 div {
     display: block;
     margin: 0 auto;
