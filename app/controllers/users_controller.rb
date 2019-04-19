@@ -3,6 +3,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
+  def index
+  end
+  
   def create
     @user = User.new(user_params)
         #byebug
@@ -39,3 +42,4 @@ private
     def user_params
         params.require(:user).permit(:username)
     end
+end
