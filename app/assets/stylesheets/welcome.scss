@@ -13,10 +13,12 @@ h1, h2, p {
     border-radius: 1%;
 }
 
-a:link, a:visited {
+a:link, a:visited, button {
     background-color: #f2e648;
     border-radius: 4%;
+    border: 0;
     color: black;
+    font-family: "Palatino", serif;
     margin: 5px;
     padding: 10px;
     text-align: center;
@@ -25,7 +27,7 @@ a:link, a:visited {
     width: 150px;
 }
 
-a:hover, a:active {
+a:hover, a:active, button:hover {
   background-image: linear-gradient(#fff23d, #f2e648);
   box-shadow: 0 12px 20px 0 #dceded, 0 -3px 20px 0 #edffff;
 }
@@ -49,7 +51,7 @@ html {
     background-image: url("https://i.imgur.com/M6tL2a8.png");
 }
 
-form {
+input {
     margin: 0 auto; 
     width: 150px;
 }

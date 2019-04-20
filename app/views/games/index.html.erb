@@ -1,10 +1,15 @@
 <body>
     <div>
             
-        <p>Continue your journey with your special key...</p>
-        <form>
-            <input type="text" name="key">
-        </form>
+        <p>Resume your journey by entering your username...</p>
+        <p><input type="text" name="key"><br>
+        <button onclick="getUsername()">Continue</button></p>
+        
+        <script>
+            function getUsername() {
+                return document.getElementById("myText").value;
+            }
+        </script>
         
         <p>OR</p>
         
