@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
+  def index
+    @users = User.all
   end
   
-  def index
+  def new
+    @user = User.new
   end
   
   def create
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
             #byebug
             redirect_to @user
         else
-            render 'new'
+            render 'index'
         end
   end
   

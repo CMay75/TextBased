@@ -1,21 +1,15 @@
 <body>
     <div>
-        <p>Enroll by entering your name!</p>
-                
-        <%= form_for :user do |f| %>
-        <p>
-            <%= f.text_field :username %> <br>
-            <%= f.submit %>
-        </p>
-        <% end %>
             
-        <p>Or continue your journey with your special key...</p>
+        <p>Continue your journey with your special key...</p>
         <form>
             <input type="text" name="key">
         </form>
         
-        <p>
-            <%= link_to 'Back', controller: 'welcome' %>
-        </p>
+        <p>OR</p>
+        
+        <p id="enroll"><%= link_to 'Start a new journey!', new_user_path %></p>
+        
+        <p><%= link_to 'Back', controller: 'welcome' %></p>
     </div>
 </body>
