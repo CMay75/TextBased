@@ -1,0 +1,44 @@
+ec2-user:~/environment (master) $ cd TextedBased
+bash: cd: TextedBased: No such file or directory
+ec2-user:~/environment (master) $ cd TextBased
+ec2-user:~/environment/TextBased (dev) $ checkout Paul
+bash: checkout: command not found
+ec2-user:~/environment/TextBased (dev) $ git checkout Paul
+Switched to branch 'Paul'
+ec2-user:~/environment/TextBased (Paul) $ git merge Paul/dev
+merge: Paul/dev - not something we can merge
+ec2-user:~/environment/TextBased (Paul) $ git merge Paul dev
+Updating b0b5427..9c88877
+Fast-forward
+ app/assets/stylesheets/welcome.scss | 13 +++++++++++++
+ app/controllers/users_controller.rb | 30 ++++++++++++++++++++++++++----
+ app/views/welcome/index.html.erb    |  1 -
+ db/schema.rb                        | 21 +++++++++++++++++++++
+ 4 files changed, 60 insertions(+), 5 deletions(-)
+ create mode 100644 db/schema.rb
+ec2-user:~/environment/TextBased (Paul) $ rails -v
+Rails 5.2.3
+ec2-user:~/environment/TextBased (Paul) $ rails console
+Running via Spring preloader in process 6358
+Loading development environment (Rails 5.2.3)
+2.4.1 :001 > rails g migration AddMageToUser mage:int
+NameError: undefined local variable or method `int' for main:Object
+Did you mean?  in?
+        from (irb):1
+2.4.1 :002 > rails g migration AddMageToUser mage:integer
+NameError: undefined local variable or method `integer' for main:Object
+Did you mean?  Integer
+        from (irb):2
+2.4.1 :003 > rails g migration AddMageToUser mage:Integer
+NoMethodError: undefined method `AddMageToUser' for main:Object
+        from (irb):3
+2.4.1 :004 > rails g migration AddMageToUser mage:Integer
+NoMethodError: undefined method `AddMageToUser' for main:Object
+        from (irb):4
+2.4.1 :005 > rails g migration add_Mage_to_User mage:Integer
+NoMethodError: undefined method `add_Mage_to_User' for main:Object
+        from (irb):5
+2.4.1 :006 > rails generate migration add_mage_to_users mage:Integer                                                                                                                                                                 
+NoMethodError: undefined method `add_mage_to_users' for main:Object
+        from (irb):6
+2.4.1 :007 > 
