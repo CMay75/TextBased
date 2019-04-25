@@ -1,0 +1,11 @@
+<body>
+    <div>
+        <h1>Leaderboard</h1>
+        
+        <% @users.each do |user| %>
+            <p><%= user.username %></p>
+        <% end %>
+        
+        <p><%= link_to 'Back', controller: 'welcome' %></p>
+    </div>
+</body>

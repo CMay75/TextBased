@@ -1,4 +1,12 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
+  
+  def show
+      @user = User.find(params[:id])
+  end
+  
   def new
     @user = User.new
   end
@@ -11,7 +19,7 @@ class UsersController < ApplicationController
             #byebug
             redirect_to @user
         else
-            render 'new'
+            render 'index'
         end
   end
   
@@ -32,7 +40,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     
-    redirect_to users_path
+    redirect_to :controller => 'welcome', :action => 'index'
   end
 
 private

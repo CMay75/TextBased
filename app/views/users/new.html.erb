@@ -1,0 +1,13 @@
+<body>
+    <div>
+        <%= form_for :user, url: users_path do |f| %>
+            <p>
+                <%= f.label :username %>
+                <%= f.text_field :username %> <br>
+                <%= f.submit %>
+            </p>
+        <% end %>
+        
+        <p><%= link_to 'Back', games_path %></p>
+    </div>
+</body>

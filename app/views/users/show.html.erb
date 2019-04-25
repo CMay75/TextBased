@@ -1,0 +1,14 @@
+<body>
+    <div>
+        <p>
+            Welcome <%= @user.username %>!
+        </p>
+        
+        <p><%= link_to 'Back to Main Menu', controller: 'welcome' %></p>
+        <p><%= link_to 'End your Journey', 
+                                  user_path(@user),
+                                  method: :delete,
+                                  data: { confirm: 'Are you sure you want to delete your character and progress?' } %></p>
+        
+    </div>
+</body>
