@@ -4,6 +4,7 @@
             Welcome <%= @user.username %>!
         </p>
         
+        <p><%= link_to 'Start', controller: 'games' %></p>
         <p><%= link_to 'Back to Main Menu', controller: 'welcome' %></p>
         <p><%= link_to 'End your Journey', 
                                   user_path(@user),
