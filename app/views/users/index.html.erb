@@ -3,7 +3,7 @@
         <h1>Newest Students</h1>
         
         <% @users.reverse_each do |user| %>
-            <p><%= user.username %> playing as a <%=  %></p>
+            <p><%= user.username %></p>
         <% end %>
         
         <p><%= link_to 'Back', controller: 'welcome' %></p>
