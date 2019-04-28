@@ -6,5 +6,9 @@
         <p>Narrative:
         <%= @game.text %>
         </p>
+        
+        <p><%= link_to 'Choice 1', game_path(2) %> <%= link_to 'Choice 2', game_path(3) %> <%= link_to 'Choice 3', game_path(4) %> <%= link_to 'Choice 4', game_path(5) %></p>
+        
+        <p><%= link_to 'Back to Main Menu', controller: 'welcome' %></p>
     </div>
 </body>

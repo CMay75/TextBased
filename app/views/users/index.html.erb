@@ -1,9 +1,9 @@
 <body>
     <div>
-        <h1>Leaderboard</h1>
+        <h1>Newest Students</h1>
         
-        <% @users.each do |user| %>
-            <p><%= user.username %></p>
+        <% @users.reverse_each do |user| %>
+            <p><%= user.username %> playing as a <%=  %></p>
         <% end %>
         
         <p><%= link_to 'Back', controller: 'welcome' %></p>

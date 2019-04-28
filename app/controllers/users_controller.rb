@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    createScenarios
     @user = User.new(user_params)
         #byebug
         
