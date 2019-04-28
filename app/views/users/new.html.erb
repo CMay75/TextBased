@@ -1,11 +1,12 @@
 <body>
     <div>
+        <h1>Enrollment</h1>
         <%= form_for :user, url: users_path do |f| %>
             <p>
                 <%= f.label :username %>
-                <%= f.text_field :username %> <br>
-                <%= f.submit %>
+                <%= f.text_field :username %>
             </p>
+            <p><%= f.submit %></p>
         <% end %>
         
         <p><%= link_to 'Back', games_path %></p>

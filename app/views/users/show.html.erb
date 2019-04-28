@@ -1,8 +1,6 @@
 <body>
     <div>
-        <p>
-            Welcome <%= @user.username %>!
-        </p>
+        <h1>Welcome <%= @user.username %>!</h1>
         
         <p><%= link_to 'Start', game_path(1) %></p>
         <p><%= link_to 'Back to Main Menu', controller: 'welcome' %></p>
